@@ -1,4 +1,8 @@
 # CapybaraGame
 
 
-Game isnt finished so if you want to finish it you can
+Game isnt finished, I plan to finish it soon
+
+Coded in android studio
+
+Inspired from a 6 year old youtube tutorial
