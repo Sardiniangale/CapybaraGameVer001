@@ -78,7 +78,9 @@ public class MainThread {
             if (frameCount == MAX_FPS ){
 
                 //Brackets
-                averageFPS = 1000{(totalTime/frameCount)/1000000};
+                averageFPS = 1000 * (totalTime / frameCount) / 1000000;
+
+
 
             }
 
@@ -91,7 +93,7 @@ public class MainThread {
 
     }
 
-    }
+
 
 
 
