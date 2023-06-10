@@ -14,6 +14,12 @@ public class MainThread {
     private Boolean running;
     public static Canvas canvas;
 
+    public void setRunning(boolean running) {
+        this.running = running;
+
+
+    }
+
     public MainThread(SurfaceHolder surfaceHolder, GamePannel gamePannel){
         super();
         this.surfaceHolder = surfaceHolder;
@@ -63,7 +69,7 @@ public class MainThread {
                 }
             }
             //Milliseconds
-            timeMills = (System.nanoTime() = startTime/1000000;
+            timeMills = (System.nanoTime() - startTime)/1000000;
             waitTime = targetTime - timeMills;
 
             try{
@@ -78,7 +84,12 @@ public class MainThread {
             if (frameCount == MAX_FPS ){
 
                 //Brackets
-                averageFPS = 1000 * (totalTime / frameCount) / 1000000;
+                averageFPS = 1000 / ( (totalTime / frameCount) / 1000000);
+
+                totalTime=0;
+                frameCount=0;
+                //Tells us the average FPS Feels good using my first line of code I ever leared.
+                System.out.println(averageFPS);
 
 
 

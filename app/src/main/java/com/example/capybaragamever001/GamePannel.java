@@ -6,7 +6,7 @@ import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
-import androidx.annotation.MainThread;
+
 
 import java.util.concurrent.ExecutionException;
 
@@ -20,7 +20,7 @@ public class GamePannel extends SurfaceView implements SurfaceHolder.Callback {
         getHolder().addCallback(this);
 
         //Come Back to this needs fixing
-        thread= new MainThread();
+        thread = new MainThread(getHolder(), this);
 
                 setFocusable(true);
 
@@ -35,7 +35,7 @@ public class GamePannel extends SurfaceView implements SurfaceHolder.Callback {
 
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
-        thread-new MainThread(getHolder(),this);
+        thread = new MainThread(getHolder(),this);
         thread.setRunning(true);
         thread.start();
 
